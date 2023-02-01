@@ -49,3 +49,30 @@
   padding: .8rem 2.6rem;
   border-radius: 35px;
 }
+
+.product {
+  padding: 3.6rem 2rem;
+}
+
+.product h2 {
+  font-size: 2rem;
+  text-transform: uppercase;
+  margin-bottom: 2.8rem;
+}
+
+.product p {
+  font-size: 1.6rem;
+  text-align: justify;
+}
+
+.product > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 4.2rem;
+}
+
+.product > div img {
+  width: 33%;
+  height: auto;
+}
