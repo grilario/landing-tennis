@@ -76,3 +76,40 @@
   width: 33%;
   height: auto;
 }
+
+.benefits {
+  padding: 3.6rem 2rem;
+}
+
+.benefits h2 {
+  font-size: 2rem;
+  text-transform: uppercase;
+  margin-bottom: 2.8rem;
+}
+
+.benefits div {
+  width: 100%;
+  position: relative;
+  border: 2px solid #ffffff;
+  border-radius: 12px;
+  padding: 1.6rem;
+}
+
+.benefits div:not(:last-child) {
+  margin-bottom: 3.6rem;
+}
+
+.benefits span {
+  position: absolute;
+  font-size: 1.6rem;
+  font-weight: bold;
+
+  top: 0;
+  transform: translate(0, -50%);
+  background-color: var(--background-color);
+  padding: 0 .8rem;
+}
+
+.benefits p {
+  font-size: 1.6rem;
+}

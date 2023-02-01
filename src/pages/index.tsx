@@ -31,9 +31,24 @@ export default function Home() {
             performance e estilo. Adquira agora o seu e experimente a diferença.
           </p>
           <div>
-            <Image src={tennisVariantRed} alt=""/>
-            <Image src={tennisVariantGold} alt=""/>
-            <Image src={tennisVariantRed2} alt=""/>
+            <Image src={tennisVariantRed} alt="" />
+            <Image src={tennisVariantGold} alt="" />
+            <Image src={tennisVariantRed2} alt="" />
+          </div>
+        </section>
+        <section className={styles.benefits}>
+          <h2>Vantagens</h2>
+          <div>
+            <span>01</span>
+            <p>Conforto e suporte otimizados para atividades físicas</p>
+          </div>
+          <div>
+            <span>02</span>
+            <p>Design icônico para destacar o seu estilo</p>
+          </div>
+          <div>
+            <span>03</span>
+            <p>Tecnologia avançada para melhor performance</p>
           </div>
         </section>
       </main>
