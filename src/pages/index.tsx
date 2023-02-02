@@ -1,4 +1,7 @@
 import Image from "next/image";
+import { motion } from "framer-motion";
+
+import Details from "@src/components/Details";
 
 import styles from "@src/styles/Home.module.css";
 
@@ -6,7 +9,21 @@ import tennis from "@src/../public/tennis.png";
 import tennisVariantRed from "@src/../public/variant-red.png";
 import tennisVariantRed2 from "@src/../public/variant-red-2.png";
 import tennisVariantGold from "@src/../public/variant-gold.png";
-import Details from "@src/components/Details";
+
+const list = {
+  visible: {
+    opacity: 1,
+    transition: { when: "beforeChildren", staggerChildren: 0.2 },
+  },
+  hidden: { opacity: 0 },
+};
+
+const item = {
+  visible: {
+    opacity: 1,
+  },
+  hidden: { opacity: 0 },
+};
 
 export default function Home() {
   return (
@@ -16,11 +33,21 @@ export default function Home() {
       </header>
       <main>
         <section className={styles.introduction}>
-          <h1>
-            Passe a ir além com um <span>Jordan</span>
-          </h1>
-          <Image src={tennis} alt="" />
-          <a href="#">BUY NOW</a>
+          <motion.div
+            initial={{ x: -300, opacity: 0 }}
+            animate={{ opacity: 1, x: 0 }}
+          >
+            <h1>
+              Passe a ir além com um <span>Jordan</span>
+            </h1>
+          </motion.div>
+          <motion.div
+            initial={{ x: 300, opacity: 0 }}
+            animate={{ opacity: 1, x: 0 }}
+          >
+            <Image src={tennis} alt="" />
+            <a href="#">BUY NOW</a>
+          </motion.div>
         </section>
         <section className={styles.product}>
           <h2>O produto</h2>
@@ -31,11 +58,17 @@ export default function Home() {
             descolado. Seja na quadra ou na rua, o Jordan é sinônimo de
             performance e estilo. Adquira agora o seu e experimente a diferença.
           </p>
-          <div>
-            <Image src={tennisVariantRed} alt="" />
-            <Image src={tennisVariantGold} alt="" />
-            <Image src={tennisVariantRed2} alt="" />
-          </div>
+          <motion.div initial="hidden" whileInView="visible" variants={list}>
+            <motion.div variants={item}>
+              <Image src={tennisVariantRed} alt="" />
+            </motion.div>
+            <motion.div variants={item}>
+              <Image src={tennisVariantGold} alt="" />
+            </motion.div>
+            <motion.div variants={item}>
+              <Image src={tennisVariantRed2} alt="" />
+            </motion.div>
+          </motion.div>
         </section>
         <section className={styles.benefits}>
           <h2>Vantagens</h2>

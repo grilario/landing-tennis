@@ -17,9 +17,10 @@
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+  overflow-x: hidden;
 }
 
-.introduction ::before {
+.introduction::before {
   z-index: -1;
   position: absolute;
   content: "";
@@ -28,6 +29,12 @@
   top: 0;
   left: 0;
   background: linear-gradient(to bottom, #0d0d0d 70%, #3a0000);
+}
+
+.introduction > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .introduction h1 {
@@ -82,8 +89,12 @@
   margin-top: 4.2rem;
 }
 
-.product > div img {
+.product > div div {
   width: 33%;
+}
+
+.product > div img {
+  width: 100%;
   height: auto;
 }
 
@@ -142,27 +153,16 @@
 
 @media (min-width: 720px) {
   .introduction {
-    display: grid;
-    grid-template-areas: "title image" "title button";
+    flex-direction: row;
+    align-items: center;
   }
 
   .introduction h1 {
     font-size: 5.2rem;
-    grid-area: title;
     align-self: center;
   }
 
-  .introduction img {
-    grid-area: image;
-    align-self: end;
-  }
-
-  .introduction a {
-    grid-area: button;
-    align-self: start;
-  }
-
-  .product > div img {
+  .product > div div {
     width: 26%;
   }
 
