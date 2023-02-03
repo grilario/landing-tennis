@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { CaretDown, CaretUp } from "phosphor-react";
-
 import styles from "./styles.module.css";
 
 interface IDetailsProps {

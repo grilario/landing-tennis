@@ -86,11 +86,15 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  gap: 2rem;
   margin-top: 4.2rem;
 }
 
 .product > div div {
-  width: 33%;
+  width: 100%;
+  background-color: #1E1E1E;
+  padding: 2.8rem 0;
+  border-radius: 8px;
 }
 
 .product > div img {
