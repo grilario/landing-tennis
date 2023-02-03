@@ -31,6 +31,18 @@
   background: linear-gradient(to bottom, #0d0d0d 70%, #3a0000);
 }
 
+.introduction::after {
+  z-index: -1;
+  position: absolute;
+  content: "NIKE";
+  width: 100%;
+  font-size: 16.8rem;
+  font-weight: bold;
+  color: #131313;
+  text-align: center;
+  transform: translateY(35%);
+}
+
 .introduction > div {
   display: flex;
   flex-direction: column;
@@ -92,7 +104,7 @@
 
 .product > div div {
   width: 100%;
-  background-color: #1E1E1E;
+  background-color: #1e1e1e;
   padding: 2.8rem 0;
   border-radius: 8px;
 }
@@ -159,6 +171,11 @@
   .introduction {
     flex-direction: row;
     align-items: center;
+  }
+
+  .introduction::after {
+    font-size: 22rem;
+    transform: translateY(5%);
   }
 
   .introduction h1 {
