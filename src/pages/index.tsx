@@ -1,3 +1,4 @@
+import Head from "next/head";
 import Image from "next/image";
 import { motion } from "framer-motion";
 
@@ -28,6 +29,13 @@ const item = {
 export default function Home() {
   return (
     <>
+      <Head>
+        <title>JORDAN - NIKE</title>
+        <meta
+          name="description"
+          content="Bem-vindo ao mundo do Jordan, onde performance e estilo se unem. Com design icônico e tecnologia avançada, o Jordan é a escolha perfeita para atletas e amantes do estilo. Projetado para garantir conforto e suporte durante as atividades físicas, este tênis é a escolha ideal para quem busca um visual atual e descolado. Oferecemos uma ampla variedade de opções de cores para escolher e entregamos diretamente à sua porta. Não perca mais tempo e experimente hoje mesmo a diferença que o Jordan pode fazer na sua vida. Adquira agora o seu!"
+        />
+      </Head>
       <header className={styles.header}>
         <h2>Nike</h2>
       </header>
@@ -45,7 +53,7 @@ export default function Home() {
             initial={{ x: 300, opacity: 0 }}
             animate={{ opacity: 1, x: 0 }}
           >
-            <Image src={tennis} alt="" />
+            <Image src={tennis} alt="" priority />
             <a href="#">BUY NOW</a>
           </motion.div>
         </section>
